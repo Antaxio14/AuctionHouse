@@ -26,9 +26,9 @@ class AHCommand extends Command implements PluginIdentifiableCommand {
 	 * @param AuctionHouse $plugin
 	 */
 	public function __construct(AuctionHouse $plugin) {
-		parent::__construct("ah", "Opens AuctionHouse", Utils::prefixMessage(TextFormat::RED . "Usage: /ah [shop | sell | listings | update | about]"), []);
+		parent::__construct("Market", "Opens AuctionHouse", Utils::prefixMessage(TextFormat::RED . "Usage: /ah [shop | sell | listings | update | about]"), []);
 		$this->plugin = $plugin;
-		$this->setAliases(["auctionhouse"]);
+		$this->setAliases(["Market"]);
 		$this->setPermissionMessage(Utils::prefixMessage(TextFormat::RED . "You do not have permission to use this command!"));
 	}
 
